@@ -52,3 +52,4 @@ EventStoreTools.Core/bin
 EventStoreTools.Infrastructure/obj
 EventStoreTools/obj/
 EventStoreTools.Core/obj/
+.vs
