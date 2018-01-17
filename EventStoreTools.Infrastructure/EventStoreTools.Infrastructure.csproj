@@ -4,4 +4,11 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DataBase\Contexts\" />
+    <Folder Include="DataBase\Repositories\" />
+    <Folder Include="EventStore\Repositories\" />
+    <Folder Include="FileManager\" />
+  </ItemGroup>
+
 </Project>
