@@ -5,10 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataBase\Contexts\" />
-    <Folder Include="DataBase\Repositories\" />
     <Folder Include="EventStore\Repositories\" />
     <Folder Include="FileManager\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="3.2.6" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventStoreTools.Core\EventStoreTools.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.EntityFrameworkCore">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore\2.0.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -3,17 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using EventStoreTools.Core.Entities;
+using EventStoreTools.Infrastructure.DataBase.Contexts;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EventStoreTools.Controllers
 {
     [Route("api/[controller]")]
+    [AllowAnonymous]
     public class ValuesController : Controller
     {
+        public EventStoreToolsDBContext _context { get; }
+
+        public ValuesController(EventStoreToolsDBContext context)
+        {
+            _context = context;
+        }
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Client> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _context.Clients;
         }
 
         // GET api/values/5
