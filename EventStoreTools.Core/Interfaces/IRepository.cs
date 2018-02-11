@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EventStoreTools.Core.Interfaces
 {
-    public interface IRepository<T> where T : new()
+    public interface IRepository<T> where T : class
     {
         IEnumerable<T> Get();
         T GetById(Guid id);

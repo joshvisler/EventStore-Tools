@@ -2,21 +2,26 @@
 using System;
 using System.Collections.Generic;
 using EventStoreTools.Core.Entities;
+using EventStoreTools.DTO.Entities.Connection;
+using AutoMapper;
 
 namespace EventStoreTools.Core.Services
 {
     public class ConnectionService : IConnectionService
     {
         private IConnectionRepository _connectionRepository;
+        private readonly IMapper _mapper;
 
-        public ConnectionService(IConnectionRepository connectionRepository)
+        public ConnectionService(IConnectionRepository connectionRepository, IMapper mapper)
         {
             _connectionRepository = connectionRepository;
+            _mapper = mapper;
         }
 
-        public Connection Add(Connection connection)
+        public Connection Add(InsertConnectionParameterDTO connection)
         {
-            return _connectionRepository.Insert(connection);
+            var connectionModel = _mapper.Map<Connection>(connection);
+            return _connectionRepository.Insert(connectionModel);
         }
 
         public void Delete(Guid id)
@@ -39,13 +44,15 @@ namespace EventStoreTools.Core.Services
             _connectionRepository.Update(value);
         }
 
-        public void Update(Guid id, Connection value)
+        public void Update(Guid id, InsertConnectionParameterDTO value)
         {
+            var connectionModel = _mapper.Map<Connection>(value);
+
             var oldConnection = _connectionRepository.GetById(id);
             if (oldConnection == null)
                 throw new ArgumentNullException();
 
-            _connectionRepository.Update(value);
+            _connectionRepository.Update(connectionModel);
         }
     }
 }

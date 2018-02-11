@@ -1,5 +1,6 @@
 ﻿using EventStoreTools.Core.Entities;
 using EventStoreTools.Core.Interfaces;
+using EventStoreTools.DTO.Entities.Connection;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -30,14 +31,15 @@ namespace EventStoreTools.Web.Controllers
             return _connectionService.GetById(id);
         }
 
+        [AllowAnonymous]
         [HttpPost]
-        public void Post([FromBody]Connection value)
+        public void Post([FromBody]InsertConnectionParameterDTO value)
         {
             _connectionService.Add(value);
         }
 
         [HttpPut("{id}")]
-        public void Put(Guid id, [FromBody]Connection value)
+        public void Put(Guid id, [FromBody]InsertConnectionParameterDTO value)
         {
             _connectionService.Update(id, value);
         }

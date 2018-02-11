@@ -6,6 +6,16 @@ namespace EventStoreTools.Core.Entities
 {
     public class Connection
     {
+        public Connection() { }
+        public Connection(Guid connectionId, string name, string connectionString, bool isDefault, int roleId)
+        {
+            ConnectionId = connectionId;
+            Name = name;
+            ConnectionString = connectionString;
+            IsDefault = isDefault;
+            RoleId = roleId;
+        }
+
         [Key]
         [Column("connectionid")]
         public Guid ConnectionId { get; private set; }

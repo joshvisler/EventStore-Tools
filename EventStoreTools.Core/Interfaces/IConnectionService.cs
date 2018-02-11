@@ -1,4 +1,5 @@
 ﻿using EventStoreTools.Core.Entities;
+using EventStoreTools.DTO.Entities.Connection;
 using System;
 using System.Collections.Generic;
 
@@ -8,8 +9,8 @@ namespace EventStoreTools.Core.Interfaces
     {
         IEnumerable<Connection> Get();
         Connection GetById(Guid id);
-        Connection Add(Connection connection);
+        Connection Add(InsertConnectionParameterDTO connection);
         void Delete(Guid id);
-        void Update(Guid id, Connection value);
+        void Update(Guid id, InsertConnectionParameterDTO value);
     }
 }

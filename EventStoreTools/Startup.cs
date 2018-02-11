@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
+using EventStoreTools.Core.Containers;
+using System.Reflection;
 
 namespace EventStoreTools
 {
@@ -24,6 +27,7 @@ namespace EventStoreTools
         {
             var connectionString = Configuration.GetConnectionString("estoolsdb");
                 services.AddEntityFrameworkNpgsql().AddDbContext<EventStoreToolsDBContext>(options => options.UseNpgsql(connectionString));
+            services.AddAutoMapper(x => x.AddProfile(new MapperProfile()));
             services.AddMvc();
             services.AddTransient<IClientService, ClientService>();
             services.AddTransient<IAuthService, AuthService>();
@@ -48,7 +52,7 @@ namespace EventStoreTools
 
             app.UseStaticFiles();
 
-            app.UseAuthentication();
+          //  app.UseAuthentication();
 
             app.UseCors(builder =>
              builder.WithOrigins("http://localhost:4200")
