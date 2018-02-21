@@ -25,12 +25,19 @@ namespace EventStoreTools.Web.Logger
 
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
-            if (formatter != null)
+            try
             {
-                lock (_lock)
+                if (formatter != null)
                 {
-                    File.AppendAllText(filePath, formatter(state, exception) + Environment.NewLine);
+                    lock (_lock)
+                    {
+                        File.AppendAllText(filePath, formatter(state, exception) + Environment.NewLine);
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+
             }
         }
     }

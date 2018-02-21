@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Search\" />
     <Folder Include="Enums\" />
   </ItemGroup>
 

@@ -12,6 +12,11 @@ using EventStoreTools.Core.Containers;
 using Microsoft.Extensions.Logging;
 using EventStoreTools.Web.Logger;
 using System.IO;
+using EventStoreTools.Core.Interfaces.Search;
+using EventStoreTools.Core.Services.Search;
+using EventStoreTools.Infrastructure.EventStore.Repositories;
+using EventStoreTools.Infrastructure.EventStore.Context;
+using EventStoreTools.Core.Services.Search.Factories;
 
 namespace EventStoreTools
 {
@@ -36,7 +41,11 @@ namespace EventStoreTools
             services.AddTransient<IClientRepository, ClientRepository>();
             services.AddTransient<IConnectionService, ConnectionService>();
             services.AddTransient<IConnectionRepository, ConnectionRepository>();
-
+            services.AddTransient<ISearchService, SearchService>();
+            services.AddTransient<IEventStoreSearchRepositopy, EventStoreSearchRepositopy>();
+            services.AddTransient<IEventStoreConnectionFactory, EventStoreConnectionFactory>();
+            services.AddTransient<ILogger, ApplicationLogger>();
+            services.AddTransient<ISearchStrategyFactory, SearchStrategyFactory>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

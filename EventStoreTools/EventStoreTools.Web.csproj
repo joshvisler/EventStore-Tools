@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Containers\" />
+    <Compile Remove="Containers\**" />
+    <Content Remove="Containers\**" />
+    <EmbeddedResource Remove="Containers\**" />
+    <None Remove="Containers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

@@ -1,0 +1,677 @@
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 1593.2852ms
+Request finished in 1855.0411ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 7.6319ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Request finished in 3.3054ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Request finished in 3.3538ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Request finished in 3.3898ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Request finished in 3.157ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Request finished in 3.126ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Request finished in 2.9638ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search  
+Request finished in 2.9304ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/Search  
+Request finished in 3.6708ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search  
+Request finished in 3.4367ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/connection  
+Executing action method EventStoreTools.Web.Controllers.ConnectionController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+Executed action EventStoreTools.Web.Controllers.ConnectionController.Get (EventStoreTools.Web) in 1809.6693ms
+Request finished in 1821.5919ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 1059.2541ms
+Request finished in 1276.7781ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.4988ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/connection  
+Executing action method EventStoreTools.Web.Controllers.ConnectionController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+Executed action EventStoreTools.Web.Controllers.ConnectionController.Get (EventStoreTools.Web) in 3907.208ms
+Request finished in 3919.2271ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/connection/a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.ConnectionController.Get (EventStoreTools.Web) with arguments (a1c47d2c-3127-4352-bde6-5d94de922c5d) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (23ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.ConnectionController.Get (EventStoreTools.Web) in 3171.6898ms
+Request finished in 3197.97ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Request finished in 3.6549ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Request finished in 3.0795ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 912.8337ms
+Request finished in 1083.6831ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.2293ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search  
+Request finished in 12.2624ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 7.4471ms
+An unhandled exception has occurred while executing the request
+Request finished in 236.8307ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 795.9835ms
+Request finished in 958.0739ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 5.8185ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 2.0038ms
+An unhandled exception has occurred while executing the request
+Request finished in 153.0724ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 837.2978ms
+Request finished in 983.7668ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 5.702ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.9683ms
+An unhandled exception has occurred while executing the request
+Request finished in 170.1333ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 797.5093ms
+Request finished in 960.6288ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 5.4877ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 2.0194ms
+An unhandled exception has occurred while executing the request
+Request finished in 166.2389ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 3.9055ms
+An unhandled exception has occurred while executing the request
+Request finished in 34035.3355ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 799.7256ms
+Request finished in 952.0498ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 4.5473ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 2.1435ms
+An unhandled exception has occurred while executing the request
+Request finished in 174.4264ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.2598ms
+An unhandled exception has occurred while executing the request
+Request finished in 94.9904ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.2129ms
+An unhandled exception has occurred while executing the request
+Request finished in 107.2868ms 500 text/html; charset=utf-8
+Heartbeat took longer than "00:00:01" at "02/20/2018 21:37:28 +00:00".
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 1520.0172ms
+Request finished in 10726.2403ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 603.3699ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 2.0606ms
+An unhandled exception has occurred while executing the request
+Request finished in 3004.6473ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.185ms
+An unhandled exception has occurred while executing the request
+Request finished in 97.3854ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.1562ms
+An unhandled exception has occurred while executing the request
+Request finished in 103.0442ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 824.5191ms
+Request finished in 984.612ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.6929ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.9533ms
+An unhandled exception has occurred while executing the request
+Request finished in 166.1305ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 758.5171ms
+Request finished in 910.856ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 7.594ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 2.2387ms
+An unhandled exception has occurred while executing the request
+Request finished in 153.1508ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.3079ms
+An unhandled exception has occurred while executing the request
+Request finished in 96.3455ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.1318ms
+An unhandled exception has occurred while executing the request
+Request finished in 95.835ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1.161ms
+An unhandled exception has occurred while executing the request
+Request finished in 96.7932ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 3.6762ms
+An unhandled exception has occurred while executing the request
+Request finished in 23045.5124ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 776.2877ms
+Request finished in 931.5151ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 5.4661ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 2.3433ms
+An unhandled exception has occurred while executing the request
+Request finished in 154.6664ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 959.4311ms
+Request finished in 1148.7059ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 10.7057ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 8633.4815ms
+Request finished in 8657.1747ms 204 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 5.6635ms
+Request finished in 12.7086ms 204 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 22421.9461ms
+An unhandled exception has occurred while executing the request
+Request finished in 22582.2977ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 20547.0081ms
+An unhandled exception has occurred while executing the request
+Request finished in 20640.5103ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 13495.1059ms
+An unhandled exception has occurred while executing the request
+Request finished in 13606.9007ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 47501.0594ms
+An unhandled exception has occurred while executing the request
+Request finished in 47616.1035ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=%22ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500%22  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 9642.8387ms
+An unhandled exception has occurred while executing the request
+Request finished in 9732.5974ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&eventStoreConnection=%22ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500%22  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Heartbeat took longer than "00:00:01" at "02/20/2018 21:51:39 +00:00".
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 15450.2572ms
+An unhandled exception has occurred while executing the request
+Request finished in 17744.4975ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=%22ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500%22  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 22401.2098ms
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 791.8127ms
+Request finished in 940.3907ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 5.4922ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&eventStoreConnection=%22ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500%22  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 8861.7764ms
+An unhandled exception has occurred while executing the request
+Request finished in 9045.275ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=%22ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500%22  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Heartbeat took longer than "00:00:01" at "02/20/2018 21:54:21 +00:00".
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 8015.006ms
+An unhandled exception has occurred while executing the request
+Request finished in 8117.0356ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 890.4115ms
+Request finished in 1050.3364ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.6109ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1238110.4315ms
+Request finished in 1238141.2498ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 9992.3407ms
+Request finished in 10000.3212ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1007.6652ms
+Request finished in 1014.6256ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 1011.7886ms
+Request finished in 1019.6732ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 1048.0982ms
+Request finished in 1244.4978ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.2206ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 7447.8126ms
+An unhandled exception has occurred while executing the request
+Request finished in 7683.3612ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&data=&eventNumber=&from=&to=&type=&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Invalid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 8359.784ms
+An unhandled exception has occurred while executing the request
+Request finished in 8455.6978ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=%22ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500%22  
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 24875.6464ms
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 4369.2122ms
+An unhandled exception has occurred while executing the request
+An unhandled exception has occurred while executing the request
+Request finished in 29360.9817ms 500 text/html; charset=utf-8
+Request finished in 4509.8304ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 3035.6242ms
+Request finished in 3042.3701ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/allevents?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.AllEventsSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.AllEventsSearch (EventStoreTools.Web) in 34829.3606ms
+Request finished in 34837.9498ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/allevents?streamId=d3ed8d92-78e3-4887-a158-2f86a17ff12d&eventStoreConnection=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.AllEventsSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.AllEventsSearch (EventStoreTools.Web) in 16487.6801ms
+Request finished in 16493.8677ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 761.8727ms
+Request finished in 917.5793ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.8308ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d?connectionString=ConnectTo=tcp://admin:changeit@127.0.0.1:1113;%2520HeartBeatTimeout=500  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (11ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 5638.1886ms
+An unhandled exception has occurred while executing the request
+Request finished in 5791.3869ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 21673.1657ms
+An unhandled exception has occurred while executing the request
+Request finished in 21793.6417ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 2166.7419ms
+An unhandled exception has occurred while executing the request
+Request finished in 2282.5531ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 3.8541ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 2727.9025ms
+Request finished in 2735.7703ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 6317.5548ms
+An unhandled exception has occurred while executing the request
+Request finished in 6403.944ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 59867.3264ms
+An unhandled exception has occurred while executing the request
+Request finished in 63219.8475ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 71147.8096ms
+An unhandled exception has occurred while executing the request
+Request finished in 71230.9532ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 89577.8543ms
+An unhandled exception has occurred while executing the request
+Request finished in 89673.5665ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 758.5591ms
+Request finished in 913.1724ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.2629ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/stream/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?connectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Request finished in 6.1421ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?connectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 99532.9326ms
+An unhandled exception has occurred while executing the request
+Request finished in 99686.1159ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?connectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 826.2967ms
+Request finished in 986.2192ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.5953ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?connectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (17ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 6654.1889ms
+An unhandled exception has occurred while executing the request
+Request finished in 8659.7596ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?connectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 9729.7531ms
+An unhandled exception has occurred while executing the request
+Request finished in 11753.2471ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d?connectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 5056.8845ms
+Request finished in 5066.7859ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d?connectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 26266.6243ms
+Request finished in 26275.5873ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?connectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 764.6127ms
+Request finished in 939.7573ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 6.7365ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) in 8070.0277ms
+Request finished in 8104.3089ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/d3ed8d92-78e3-4887-a158-2f86a17ff12d/0?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.StreamSearch (EventStoreTools.Web) with arguments (d3ed8d92-78e3-4887-a158-2f86a17ff12d, 0, EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/allevents/?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.AllEventsSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action EventStoreTools.Web.Controllers.SearchController.AllEventsSearch (EventStoreTools.Web) in 7982.8948ms
+Request finished in 7992.4242ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/allevents?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.AllEventsSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1
+Request starting HTTP/1.1 GET http://localhost:60794/api/values  
+Executing action method EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."clientid", "c"."login", "c"."password", "c"."roleid"
+FROM "clients" AS "c"
+Executed action EventStoreTools.Controllers.ValuesController.Get (EventStoreTools.Web) in 770.626ms
+Request finished in 916.3507ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:60794/favicon.ico  
+Request finished in 8.6946ms 404 
+Request starting HTTP/1.1 GET http://localhost:60794/api/v1/search/allevents/?ConnectionId=a1c47d2c-3127-4352-bde6-5d94de922c5d  
+Executing action method EventStoreTools.Web.Controllers.SearchController.AllEventsSearch (EventStoreTools.Web) with arguments (EventStoreTools.DTO.Entities.Search.SearchParamsDTO) - ModelState is Valid
+Entity Framework Core 2.0.1-rtm-125 initialized 'EventStoreToolsDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+Executed DbCommand (9ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "c"."connectionid", "c"."connectionstring", "c"."isdefault", "c"."name", "c"."roleid"
+FROM "connections" AS "c"
+WHERE "c"."connectionid" = @__id_0
+LIMIT 1

@@ -1,16 +1,17 @@
 ﻿using EventStore.ClientAPI;
-using System;
+using Microsoft.Extensions.Logging;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace EventStoreTools.Infrastructure.EventStore.Context
 {
-    public class EventStoreConnectionContext : IDisposable
+    public class EventStoreConnectionContext : IEventStoreConnectionContext
     {
         public IEventStoreConnection Connection { get; private set; }
-        private readonly ILogger _logger;
+        //private readonly ILogger _logger;
 
-        public EventStoreConnectionContext(string connectionString, ILogger logger)
+        public EventStoreConnectionContext(string connectionString/*, ILogger logger*/)
         { 
-            _logger = logger;
+           // _logger = logger;
 
             var coonectionSettings = ConnectionSettings.Create();
             var connectionBuilder = coonectionSettings.KeepReconnecting();
@@ -27,30 +28,30 @@ namespace EventStoreTools.Infrastructure.EventStore.Context
             Connection.ConnectAsync().Wait();
         }
 
-        public void DisconnectHandler(object o, ClientConnectionEventArgs arg)
+        private void DisconnectHandler(object o, ClientConnectionEventArgs arg)
         {
-            _logger.Info("Disconnected from EventStore", arg);
+           // _logger.LogInformation("Disconnected from EventStore", arg);
             Connect();
         }
 
-        public void ConnectionHandler(object o, ClientConnectionEventArgs arg)
+        private void ConnectionHandler(object o, ClientConnectionEventArgs arg)
         {
-            _logger.Info("Connect to EventStore successful", arg);
+          //  _logger.LogInformation("Connect to EventStore successful", arg);
         }
 
-        public void ReconectionHandler(object o, ClientReconnectingEventArgs arg)
+        private void ReconectionHandler(object o, ClientReconnectingEventArgs arg)
         {
-            _logger.Info("Reconnecting to EventStore", arg);
+           // _logger.LogInformation("Reconnecting to EventStore", arg);
         }
 
-        public void ConnectionCloseHandler(object o, ClientClosedEventArgs arg)
+        private void ConnectionCloseHandler(object o, ClientClosedEventArgs arg)
         {
-            _logger.Info("Connection Closed", arg);
+           // _logger.LogInformation("Connection Closed", arg);
         }
 
-        public void AuthenticationFailedHandler(object o, ClientAuthenticationFailedEventArgs arg)
+        private void AuthenticationFailedHandler(object o, ClientAuthenticationFailedEventArgs arg)
         {
-            _logger.Info("AuthenticationFailed", arg);
+            //_logger.LogInformation("AuthenticationFailed", arg);
         }
 
         public void Dispose()

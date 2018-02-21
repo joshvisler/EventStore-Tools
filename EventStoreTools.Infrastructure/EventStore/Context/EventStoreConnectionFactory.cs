@@ -1,20 +1,20 @@
 ﻿using EventStore.ClientAPI;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace EventStoreTools.Infrastructure.EventStore.Context
 {
     public class EventStoreConnectionFactory : IEventStoreConnectionFactory
     {
-        private readonly ILogger _logger;
+       // private readonly ILogger _logger;
 
-        public EventStoreConnectionFactory(ILogger logger)
+        public EventStoreConnectionFactory(/*ILogger logger*/)
         {
-            _logger = logger;
+           // _logger = logger;
         }
 
-        public IEventStoreConnection Create(string connectionString)
+        public IEventStoreConnectionContext Create(string connectionString)
         {
-            var connectionContext = new EventStoreConnectionContext(connectionString, _logger);
-            return connectionContext.Connection;
+            return new EventStoreConnectionContext(connectionString/*, _logger*/);
         }
     }
 }

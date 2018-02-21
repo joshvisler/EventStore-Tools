@@ -65,5 +65,10 @@ namespace EventStoreTools.Infrastructure.DataBase.Repositories
             _dbContext.Clients.Update(client);
             await _dbContext.SaveChangesAsync();
         }
+
+        public void Dispose()
+        {
+            _dbContext.Dispose();
+        }
     }
 }
