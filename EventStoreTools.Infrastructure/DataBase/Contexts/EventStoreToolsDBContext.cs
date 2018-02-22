@@ -8,7 +8,8 @@ namespace EventStoreTools.Infrastructure.DataBase.Contexts
         public DbSet<Role> Roles { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Connection> Connections { get; set; }
-        
+        public DbSet<Subscribe> Subscribes { get; set; }
+
         public EventStoreToolsDBContext(DbContextOptions<EventStoreToolsDBContext> options):base(options)
         {
 
@@ -21,6 +22,7 @@ namespace EventStoreTools.Infrastructure.DataBase.Contexts
             builder.Entity<Role>().ToTable("roles");
             builder.Entity<Client>().ToTable("clients");
             builder.Entity<Connection>().ToTable("connections");
+            builder.Entity<Subscribe>().ToTable("subscribes");
         }
     }
 }

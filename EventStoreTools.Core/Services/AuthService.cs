@@ -4,6 +4,8 @@ using EventStoreTools.Core.Entities;
 using System.Security.Claims;
 using EventStoreTools.Core.Encrypt;
 using System.Collections.Generic;
+using System.Linq;
+using EventStoreTools.Core.Exceptions;
 
 namespace EventStoreTools.Core.Services
 {
@@ -41,6 +43,16 @@ namespace EventStoreTools.Core.Services
             var passwordHash = Encrypter.EncryptString(user.Password, KEY);
 
             return _clientRepository.Insert(new Client(Guid.NewGuid(), UserRole, passwordHash, user.Login));
+        }
+
+        public Client GetCurrentClient(ClaimsPrincipal user)
+        {
+            var login = user.Claims.Where(c => c.Type == ClaimsIdentity.DefaultNameClaimType).FirstOrDefault().Value;
+
+            if (login == null)
+                throw new UserNotFoundException();
+
+            return _clientRepository.GetByLogin(login);
         }
     }
 }

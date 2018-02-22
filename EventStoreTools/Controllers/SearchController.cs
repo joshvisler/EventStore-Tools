@@ -4,6 +4,8 @@ using EventStoreTools.DTO.Entities.Search;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 
 namespace EventStoreTools.Web.Controllers
 {
@@ -33,6 +35,7 @@ namespace EventStoreTools.Web.Controllers
         [HttpGet("allevents")]
         public IEnumerable<Event> AllEventsSearch(SearchParamsDTO searchParams)
         {
+            this.User.Claims.Where(c => c.Type == ClaimsIdentity.DefaultNameClaimType);
             return _searchService.EventsSearch(searchParams);
         }
     }

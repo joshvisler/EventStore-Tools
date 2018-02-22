@@ -7,5 +7,6 @@ namespace EventStoreTools.Core.Interfaces
     {
         Client Register(AuthParameters user);
         ClaimsIdentity Auth(AuthParameters user);
+        Client GetCurrentClient(ClaimsPrincipal user);
     }
 }
