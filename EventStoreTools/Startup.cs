@@ -17,6 +17,7 @@ using EventStoreTools.Core.Services.Search;
 using EventStoreTools.Infrastructure.EventStore.Repositories;
 using EventStoreTools.Infrastructure.EventStore.Context;
 using EventStoreTools.Core.Services.Search.Factories;
+using EventStoreTools.Core.Interfaces.Subscribes;
 
 namespace EventStoreTools
 {
@@ -46,6 +47,9 @@ namespace EventStoreTools
             services.AddTransient<IEventStoreConnectionFactory, EventStoreConnectionFactory>();
             services.AddTransient<ILogger, ApplicationLogger>();
             services.AddTransient<ISearchStrategyFactory, SearchStrategyFactory>();
+            services.AddTransient<ISubscribeRepository, SubscribeRepository>();
+            services.AddTransient<ISubscribesService, SubscribesService>();
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
