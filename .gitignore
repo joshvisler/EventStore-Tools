@@ -52,4 +52,11 @@ EventStoreTools.Core/bin
 EventStoreTools.Infrastructure/obj
 EventStoreTools/obj/
 EventStoreTools.Core/obj/
+
+BackupRestoreService/BackupRestoreService.Infrastrucute/bin
+BackupRestoreService/BackupRestoreService.Infrastrucute/obj
+BackupRestoreService/BackupRestoreService.Core/obj
+BackupRestoreService/BackupRestoreService.Core/bin
+BackupRestoreService/BackupRestoreService/obj
+BackupRestoreService/BackupRestoreService/bin
 .vs
