@@ -7,7 +7,7 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.2" />
     <PackageReference Include="EventStore.ClientAPI.NetCore" Version="4.1.0.23" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0-preview1-final" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +24,10 @@
     <Reference Include="System.IdentityModel.Tokens.Jwt">
       <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\system.identitymodel.tokens.jwt\5.1.4\lib\netstandard1.4\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\Retore\" />
   </ItemGroup>
 
 </Project>

@@ -6,14 +6,13 @@
 
   <ItemGroup>
     <Folder Include="EventStore\Repositories\" />
-    <Folder Include="FileManager\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="EventStore.ClientAPI.NetCore" Version="4.1.0.23" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
-    <PackageReference Include="Npgsql" Version="3.2.6" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Npgsql" Version="3.2.7" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.1.0-preview1" />
   </ItemGroup>
 
   <ItemGroup>
