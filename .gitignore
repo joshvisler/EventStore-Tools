@@ -60,3 +60,5 @@ BackupRestoreService/BackupRestoreService.Core/bin
 BackupRestoreService/BackupRestoreService/obj
 BackupRestoreService/BackupRestoreService/bin
 .vs
+Logger/obj
+Logger/bin
