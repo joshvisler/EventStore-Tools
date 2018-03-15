@@ -12,8 +12,4 @@
     <ProjectReference Include="..\BackupRestoreService.Core\BackupRestoreService.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="FileSystemManager\" />
-  </ItemGroup>
-
 </Project>

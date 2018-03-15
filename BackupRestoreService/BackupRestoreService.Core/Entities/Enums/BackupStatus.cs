@@ -7,6 +7,7 @@ namespace BackupRestoreService.Core.Entities.Enums
         Failure,
         InProgress,
         EventStoreNotFound,
+        Deleted,
         NoStatus
     }
 }

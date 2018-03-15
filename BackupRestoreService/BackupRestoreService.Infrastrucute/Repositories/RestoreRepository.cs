@@ -35,11 +35,27 @@ namespace BackupRestoreService.Infrastrucute.Repositories
             _context.Dispose();
         }
 
+        public async Task<Restore> Get(Guid id)
+        {
+            return await Task.Run<Restore>(() =>
+             {
+                 return _context.Restors.FirstOrDefault(r => r.RestoreId == id);
+             });
+        }
+
         public Task<IEnumerable<Restore>> GetAll()
         {
             return Task.Run<IEnumerable<Restore>>(() =>
             {
                 return _context.Restors.Select(r => r);
+            });
+        }
+
+        public Task Insert(Restore data)
+        {
+            return Task.Run(() =>
+            {
+                _context.Restors.Add(data);
             });
         }
 

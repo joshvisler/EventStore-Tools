@@ -8,8 +8,8 @@ namespace BackupRestoreService.Core.Interfaces
 {
     public interface IBackupService
     {
-        Task<BackupStatus> CreateAsync(Backup backup);
+        Task<BackupStatus> CreateAsync(Guid clientId);
         Task<IEnumerable<Backup>> GetAllBackupsAsync();
-        Task DeleteAsync(Guid backupId);
+        Task DeleteAsync(Guid backupId, Guid clientId);
     }
 }
