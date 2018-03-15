@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
+using BackupRestoreService.Core.Interfaces;
+using BackupRestoreService.Core.Services;
+using BackupRestoreService.Infrastrucute.Context;
+using BackupRestoreService.Infrastrucute.FileSystemManager;
+using BackupRestoreService.Infrastrucute.Repositories;
+using EventStoreTools.Web.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace BackupRestoreService
 {
@@ -23,16 +26,39 @@ namespace BackupRestoreService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionString = Configuration.GetConnectionString("backupdb");
+            services.AddEntityFrameworkNpgsql().AddDbContext<RestoreBackupContext>(options => options.UseNpgsql(connectionString));
             services.AddMvc();
+            services.AddTransient<IBackupService, BackupService>();
+            services.AddTransient<IRestoreService, RestoreService>();
+            services.AddTransient<IRestoreRepository, RestoreRepository>();
+            services.AddTransient<IBackupRepository, BackupRepository>();
+            services.AddTransient<IBackupRestoreFileManager, BackupRestoreFileManager>();
+            services.AddTransient<IFileManager, LocalFileManagment>();
+            services.AddTransient<ILogger, ApplicationLogger>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
+            var logger = loggerFactory.CreateLogger("ApplicationLogger");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+
+            app.UseStaticFiles();
+            app.UseCors(builder =>
+             builder.WithOrigins("http://localhost:4200")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
 
             app.UseMvc();
         }

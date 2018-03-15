@@ -10,7 +10,6 @@ using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
 using EventStoreTools.Core.Containers;
 using Microsoft.Extensions.Logging;
-using EventStoreTools.Web.Logger;
 using System.IO;
 using EventStoreTools.Core.Interfaces.Search;
 using EventStoreTools.Core.Services.Search;
@@ -18,6 +17,7 @@ using EventStoreTools.Infrastructure.EventStore.Repositories;
 using EventStoreTools.Infrastructure.EventStore.Context;
 using EventStoreTools.Core.Services.Search.Factories;
 using EventStoreTools.Core.Interfaces.Subscribes;
+using EventStoreTools.Web.Logger;
 
 namespace EventStoreTools
 {
