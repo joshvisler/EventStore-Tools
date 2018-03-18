@@ -26,8 +26,14 @@ namespace BackupRestoreService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("backupdb");
-            services.AddEntityFrameworkNpgsql().AddDbContext<RestoreBackupContext>(options => options.UseNpgsql(connectionString));
+            var connection = Configuration["ConnectionStrings:BackupRestoreConnectionString"];
+
+            services.AddDbContext<RestoreBackupContext>(options =>
+                options.UseSqlite(connection)
+            );
+
+
+
             services.AddMvc();
             services.AddTransient<IBackupService, BackupService>();
             services.AddTransient<IRestoreService, RestoreService>();
@@ -43,6 +49,12 @@ namespace BackupRestoreService
         {
             loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
             var logger = loggerFactory.CreateLogger("ApplicationLogger");
+
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<RestoreBackupContext>();
+                context.Database.EnsureCreated();
+            }
 
             if (env.IsDevelopment())
             {

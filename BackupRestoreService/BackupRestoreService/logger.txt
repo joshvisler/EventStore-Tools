@@ -1,0 +1,58 @@
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Executing action method BackupRestoreService.Controllers.ValuesController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action BackupRestoreService.Controllers.ValuesController.Get (BackupRestoreService) in 103.9708ms
+Request finished in 346.3939ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/favicon.ico  
+Request finished in 4.6831ms 404 
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Executing action method BackupRestoreService.Controllers.ValuesController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action BackupRestoreService.Controllers.ValuesController.Get (BackupRestoreService) in 65.834ms
+Request finished in 236.8604ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/favicon.ico  
+Request finished in 5.1644ms 404 
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+An error occurred using the connection to database 'main' on server 'C:\git\damienbod\AspNetCoreSQLite\src\AspNetCoreSQLite\dataeventrecords.sqlite'.
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+An error occurred using the connection to database 'main' on server 'C:\git\damienbod\AspNetCoreSQLite\src\AspNetCoreSQLite\dataeventrecords.sqlite'.
+Application startup exception
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+An error occurred using the connection to database 'main' on server 'C:\git\damienbod\AspNetCoreSQLite\src\AspNetCoreSQLite\dataeventrecords.sqlite'.
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+An error occurred using the connection to database 'main' on server 'C:\git\damienbod\AspNetCoreSQLite\src\AspNetCoreSQLite\dataeventrecords.sqlite'.
+Application startup exception
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 78.9357ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/favicon.ico  
+Request finished in 18.5903ms 500 text/html; charset=utf-8
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "backups" (
+    "BackupId" BLOB NOT NULL CONSTRAINT "PK_backups" PRIMARY KEY,
+    "Date" TEXT NOT NULL,
+    "ExecutedDate" TEXT NOT NULL,
+    "ClientId" BLOB NOT NULL,
+    "BackupPath" TEXT NULL,
+    "Status" INTEGER NOT NULL
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "restors" (
+    "RestoreId" BLOB NOT NULL CONSTRAINT "PK_restors" PRIMARY KEY,
+    "BackupId" BLOB NOT NULL,
+    "Date" TEXT NOT NULL,
+    "ExecutedDate" TEXT NOT NULL,
+    "ClientId" BLOB NOT NULL,
+    "Status" INTEGER NOT NULL
+);
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Executing action method BackupRestoreService.Controllers.ValuesController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action BackupRestoreService.Controllers.ValuesController.Get (BackupRestoreService) in 82.6195ms
+Request finished in 302.376ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/favicon.ico  
+Request finished in 4.1212ms 404 

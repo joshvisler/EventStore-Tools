@@ -30,7 +30,6 @@
   <ItemGroup>
     <ProjectReference Include="..\EventStoreTools.DTO\EventStoreTools.DTO.csproj" />
     <ProjectReference Include="..\EventStoreTools.Infrastructure\EventStoreTools.Infrastructure.csproj" />
-    <ProjectReference Include="..\Logger\Logger.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,12 +8,18 @@ namespace BackupRestoreService.Infrastrucute.FileSystemManager
 {
     public class BackupRestoreFileManager : IBackupRestoreFileManager
     {
-        private string _backupPath = @"C:\University\Диплом\EventStore\Backups";
-        private string _dataPath = @"C:\University\Диплом\EventStore\data";
+        private string _backupPath;
+        private string _dataPath;
         private const string DateTimeFormat = "d";
         private const string FileExt = ".zip";
         private const string Chaser = "chaser.chk";
         private const string Truncate = "truncate.chk";
+
+        public BackupRestoreFileManager(string backupPath, string dataPath)
+        {
+            _backupPath = backupPath;
+            _dataPath = dataPath;
+        }
 
         /*
          * https://eventstore.org/docs/server/database-backup/
