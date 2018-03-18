@@ -24,12 +24,6 @@ namespace BackupRestoreService.Controllers
             return await _backupService.GetAllBackupsAsync();
         }
 
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         [HttpPost]
         public ActionResult Post([FromBody]Guid clientId)
         {
