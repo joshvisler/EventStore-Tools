@@ -10,6 +10,6 @@ namespace BackupRestoreService.Core.Interfaces
     {
         Task<BackupStatus> CreateAsync(Guid clientId);
         Task<IEnumerable<Backup>> GetAllBackupsAsync();
-        Task DeleteAsync(Guid backupId, Guid clientId);
+        Task DeleteAsync(int backupId, Guid clientId);
     }
 }

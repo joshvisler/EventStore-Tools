@@ -27,7 +27,7 @@ namespace BackupRestoreService.Core.Services
                  try
                  {
                      var backupFilePath = await _backupRestoreFileManager.CreateBackupFileAsync();
-                     var backup = new Backup(Guid.NewGuid(), startTime, DateTime.UtcNow, clientId, backupFilePath, status);
+                     var backup = new Backup(startTime, DateTime.UtcNow, clientId, backupFilePath, status);
                      await _backupRepository.Insert(backup);
                      status = BackupStatus.Success;
                  }
@@ -40,7 +40,7 @@ namespace BackupRestoreService.Core.Services
              });
         }
 
-        public async Task DeleteAsync(Guid backupId, Guid clientId)
+        public async Task DeleteAsync(int backupId, Guid clientId)
         {
             await Task.Run(async () =>
             {

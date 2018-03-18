@@ -5,7 +5,7 @@ namespace BackupRestoreService.Core.Entities
 {
     public class Restore
     {
-        public Restore(Guid restoreId, Guid backupId, DateTime date, DateTime executedDate, Guid clientId, RestoreStatus status = RestoreStatus.NoStatus)
+        public Restore(int restoreId, int backupId, DateTime date, DateTime executedDate, Guid clientId, RestoreStatus status = RestoreStatus.NoStatus)
         {
             RestoreId = restoreId;
             BackupId = backupId;
@@ -15,8 +15,17 @@ namespace BackupRestoreService.Core.Entities
             Status = status;
         }
 
-        public Guid RestoreId { get; private set; }
-        public Guid BackupId { get; private set; }
+        public Restore(int backupId, DateTime date, DateTime executedDate, Guid clientId, RestoreStatus status = RestoreStatus.NoStatus)
+        {
+            BackupId = backupId;
+            Date = date;
+            ExecutedDate = executedDate;
+            ClientId = clientId;
+            Status = status;
+        }
+
+        public int RestoreId { get; private set; }
+        public int BackupId { get; private set; }
         public DateTime Date { get; private set; } //start create  backup
         public DateTime ExecutedDate { get; private set; }// backup created date
         public Guid ClientId { get; private set; }

@@ -18,7 +18,7 @@ namespace BackupRestoreService.Infrastrucute.Repositories
             _context = context;
         }
 
-        public Task Delete(Guid id)
+        public Task Delete(int id)
         {
             return Task.Run(()=>
             {
@@ -27,6 +27,7 @@ namespace BackupRestoreService.Infrastrucute.Repositories
                     throw new BackupNotFoundException();
 
                 _context.Backups.Remove(backup);
+                _context.SaveChangesAsync();
             });
         }
 
@@ -35,11 +36,12 @@ namespace BackupRestoreService.Infrastrucute.Repositories
             _context.Dispose();
         }
 
-        public Task<Backup> Get(Guid id)
+        public Task<Backup> Get(int id)
         {
             return Task.Run<Backup>(() =>
             {
                 return _context.Backups.FirstOrDefault(b => b.BackupId == id);
+                _context.SaveChangesAsync();
             });
         }
 
@@ -56,6 +58,7 @@ namespace BackupRestoreService.Infrastrucute.Repositories
             return Task.Run(() =>
             {
                  _context.Backups.Add(backup);
+                _context.SaveChangesAsync();
             });
         }
 
@@ -69,6 +72,7 @@ namespace BackupRestoreService.Infrastrucute.Repositories
                     throw new BackupNotFoundException();
 
                 _context.Backups.Update(backup);
+                _context.SaveChangesAsync();
             });
         }
     }

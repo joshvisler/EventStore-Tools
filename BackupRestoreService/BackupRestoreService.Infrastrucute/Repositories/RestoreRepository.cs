@@ -18,7 +18,7 @@ namespace BackupRestoreService.Infrastrucute.Repositories
             _context = context;
         }
 
-        public Task Delete(Guid id)
+        public Task Delete(int id)
         {
             return Task.Run(() =>
             {
@@ -35,7 +35,7 @@ namespace BackupRestoreService.Infrastrucute.Repositories
             _context.Dispose();
         }
 
-        public async Task<Restore> Get(Guid id)
+        public async Task<Restore> Get(int id)
         {
             return await Task.Run<Restore>(() =>
              {

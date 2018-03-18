@@ -1,4 +1,5 @@
 ﻿using BackupRestoreService.Core.Interfaces;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 using System.IO.Compression;
@@ -10,17 +11,17 @@ namespace BackupRestoreService.Infrastrucute.FileSystemManager
     {
         private string _backupPath;
         private string _dataPath;
-        private const string DateTimeFormat = "d";
+        private const string DateTimeFormat = "dd-MM-yyyy hh-mm-ss";
         private const string FileExt = ".zip";
         private const string Chaser = "chaser.chk";
         private const string Truncate = "truncate.chk";
 
-        public BackupRestoreFileManager(string backupPath, string dataPath)
+        public BackupRestoreFileManager(IConfiguration Configuration)
         {
-            _backupPath = backupPath;
-            _dataPath = dataPath;
+            _backupPath = Configuration["BackupPath"];
+            _dataPath = Configuration["EventStoreDataPath"];
         }
-
+        
         /*
          * https://eventstore.org/docs/server/database-backup/
          * Copy all *.chk files to the backup location.
@@ -30,7 +31,12 @@ namespace BackupRestoreService.Infrastrucute.FileSystemManager
         {
             return await Task.Run<string>(() => 
             {
-                var zipPath = _backupPath + DateTime.UtcNow.ToString(DateTimeFormat) + FileExt;
+                if(!Directory.Exists(_backupPath))
+                {
+                    Directory.CreateDirectory(_backupPath);
+                }
+
+                var zipPath = string.Format("{0}\\{1}{2}",_backupPath, DateTime.UtcNow.ToString(DateTimeFormat),FileExt);
                 ZipFile.CreateFromDirectory(_dataPath, zipPath);
                 return zipPath;
             });

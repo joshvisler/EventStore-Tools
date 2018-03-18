@@ -20,7 +20,7 @@ namespace BackupRestoreService.Core.Services
             _backupRepository = backupRepository;
         }
 
-        public async Task<RestoreStatus> RestoreAsync(Guid clientId, Guid backupId)
+        public async Task<RestoreStatus> RestoreAsync(Guid clientId, int backupId)
         {
             return await Task.Run(async () =>
             {
@@ -32,7 +32,7 @@ namespace BackupRestoreService.Core.Services
                     var backup = await _backupRepository.Get(backupId);
 
                     await _backupRestoreFileManager.RestoreFromBackupFileAsync(backup.BackupPath);
-                    var restore = new Restore(Guid.NewGuid(), backupId, DateTime.UtcNow, DateTime.UtcNow, clientId,  status);
+                    var restore = new Restore(backupId, DateTime.UtcNow, DateTime.UtcNow, clientId,  status);
                     status = RestoreStatus.Success;
                 }
                 catch (Exception e)
@@ -44,7 +44,7 @@ namespace BackupRestoreService.Core.Services
             });
         }
 
-        public async Task DeleteAsync(Guid restoreId)
+        public async Task DeleteAsync(int restoreId)
         {
             await Task.Run(async () =>
             {
