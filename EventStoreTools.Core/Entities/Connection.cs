@@ -7,13 +7,14 @@ namespace EventStoreTools.Core.Entities
     public class Connection
     {
         public Connection() { }
-        public Connection(Guid connectionId, string name, string connectionString, bool isDefault, int roleId)
+        public Connection(Guid connectionId, string name, string connectionString, bool isDefault, int roleId, string serviceAddress)
         {
             ConnectionId = connectionId;
             Name = name;
             ConnectionString = connectionString;
             IsDefault = isDefault;
             RoleId = roleId;
+            ServiceAddress = serviceAddress;
         }
 
         [Key]
@@ -28,6 +29,9 @@ namespace EventStoreTools.Core.Entities
         [ForeignKey("Role")]
         [Column("roleid")]
         public int RoleId { get; private set; }
+        [Column("serviceaddress")]
+        public string ServiceAddress { get; private set; }
+
 
         public Role Role { get; private set; }
     }

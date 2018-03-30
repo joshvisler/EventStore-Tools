@@ -1,39 +1,27 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using EventStoreTools.Core.Entities.Enums;
+using System;
 
 namespace EventStoreTools.Core.Entities
 {
     public class Restore
     {
-        public Restore()
-        {
-        }
-
-        public Restore(Guid restoreId, Guid clientId, Guid connectionId, string progress, DateTime date)
+        public Restore(int restoreId, int backupId, DateTime date, DateTime executedDate, Guid clientId, RestoreStatus status = RestoreStatus.NoStatus)
         {
             RestoreId = restoreId;
-            ClientId = clientId;
-            ConnectionId = connectionId;
-            Progress = progress;
+            BackupId = backupId;
             Date = date;
+            ExecutedDate = executedDate;
+            ClientId = clientId;
+            Status = status;
         }
 
-        [Key]
-        [Column("restoreid")]
-        public Guid RestoreId { get; private set; }
-        [ForeignKey("Client")]
-        [Column("clientid")]
+        public int RestoreId { get; private set; }
+        public int BackupId { get; private set; }
+        public DateTime Date { get; private set; } //start create  backup
+        public DateTime ExecutedDate { get; private set; }// backup created date
         public Guid ClientId { get; private set; }
-        [ForeignKey("Connection")]
-        [Column("connectionid")]
-        public Guid ConnectionId { get; private set; }
-        [Column("progress")]
-        public string Progress { get; private set; }
-        [Column("date")]
-        public DateTime Date { get; set; }
+        public RestoreStatus Status { get; private set; }
 
-        public Client Client { get; private set; }
-        public Connection Connection { get; private set; }
     }
 }
+

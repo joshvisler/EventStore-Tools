@@ -10,5 +10,6 @@ namespace EventStoreTools.DTO.Entities.Connection
         public string ConnectionString { get; set; }
         public bool IsDefault { get; set; }
         public int RoleId { get;  set; }
+        public string ServerAddress { get;  set; }
     }
 }

@@ -56,6 +56,7 @@ namespace BackupRestoreService.Infrastrucute.Repositories
             return Task.Run(() =>
             {
                 _context.Restors.Add(data);
+                _context.SaveChangesAsync();
             });
         }
 
@@ -69,6 +70,9 @@ namespace BackupRestoreService.Infrastrucute.Repositories
                     throw new RestoreNotFoundException();
 
                 _context.Restors.Update(restore);
+
+                _context.SaveChangesAsync();
+
             });
         }
     }

@@ -26,20 +26,27 @@ namespace BackupRestoreService.Core.Services
             {
                 var status = RestoreStatus.InProgress;
                 var startTime = DateTime.UtcNow;
+                var restore = new Restore(backupId, DateTime.UtcNow, DateTime.UtcNow, clientId, status);
+                await _restoreRepository.Insert(restore);
 
                 try
                 {
                     var backup = await _backupRepository.Get(backupId);
 
                     await _backupRestoreFileManager.RestoreFromBackupFileAsync(backup.BackupPath);
-                    var restore = new Restore(backupId, DateTime.UtcNow, DateTime.UtcNow, clientId,  status);
                     status = RestoreStatus.Success;
+                    restore.UpdateStatus(status);
+
                 }
                 catch (Exception e)
                 {
                     status = RestoreStatus.Failure;
+                    restore.UpdateStatus(status);
+                    await _restoreRepository.Update(restore);
+
                 }
 
+                await _restoreRepository.Update(restore);
                 return status;
             });
         }

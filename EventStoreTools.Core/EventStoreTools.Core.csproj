@@ -8,6 +8,7 @@
     <PackageReference Include="AutoMapper" Version="6.2.2" />
     <PackageReference Include="EventStore.ClientAPI.NetCore" Version="4.1.0.23" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0-preview1-final" />
+    <PackageReference Include="RestSharp" Version="106.2.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Retore\" />
+    <Folder Include="Interfaces\Subscribe\" />
   </ItemGroup>
 
 </Project>

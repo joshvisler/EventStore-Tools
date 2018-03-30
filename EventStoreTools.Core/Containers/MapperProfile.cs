@@ -9,7 +9,7 @@ namespace EventStoreTools.Core.Containers
     {
         public MapperProfile()
         {
-            CreateMap<InsertConnectionParameterDTO, Connection>().ConstructUsing(x=> new Connection(Guid.NewGuid(), x.Name, x.ConnectionString, x.IsDefault, x.RoleId));
+            CreateMap<InsertConnectionParameterDTO, Connection>().ConstructUsing(x=> new Connection(Guid.NewGuid(), x.Name, x.ConnectionString, x.IsDefault, x.RoleId, x.ServerAddress));
         }
     }
 }

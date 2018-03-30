@@ -35,7 +35,7 @@ namespace EventStoreTools.Web.Controllers
         [HttpGet("allevents")]
         public IEnumerable<Event> AllEventsSearch(SearchParamsDTO searchParams)
         {
-            this.User.Claims.Where(c => c.Type == ClaimsIdentity.DefaultNameClaimType);
+            var test = this.User.Claims.Where(c => c.Type == ClaimsIdentity.DefaultNameClaimType);
             return _searchService.EventsSearch(searchParams);
         }
     }

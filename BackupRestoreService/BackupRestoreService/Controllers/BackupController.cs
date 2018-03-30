@@ -37,9 +37,9 @@ namespace BackupRestoreService.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public async Task Delete([FromBody]Guid clientId, [FromBody]int backupId)
+        public async Task Delete([FromBody]InputParametersBase input)
         {
-            await _backupService.DeleteAsync(backupId, clientId);
+            await _backupService.DeleteAsync(input.BackupId, input.ClientId);
         }
     }
 }

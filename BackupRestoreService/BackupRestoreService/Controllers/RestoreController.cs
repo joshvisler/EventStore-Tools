@@ -24,14 +24,14 @@ namespace BackupRestoreService.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody]Guid clientId, int backupId)
+        public ActionResult Post([FromBody]InputParametersBase input)
         {
-            if (clientId == Guid.Empty)
+            if (input.ClientId == Guid.Empty)
             {
                 return BadRequest("Client not found");
             }
 
-            return Ok(_restoreService.RestoreAsync(clientId, backupId));
+            return Ok(_restoreService.RestoreAsync(input.ClientId, input.BackupId));
         }
 
         // DELETE api/values/5

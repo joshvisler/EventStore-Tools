@@ -18,6 +18,8 @@ using EventStoreTools.Infrastructure.EventStore.Context;
 using EventStoreTools.Core.Services.Search.Factories;
 using EventStoreTools.Core.Interfaces.Subscribes;
 using EventStoreTools.Web.Logger;
+using EventStoreTools.Core.Interfaces.Restores;
+using EventStoreTools.Core.Services.Retore;
 
 namespace EventStoreTools
 {
@@ -49,6 +51,7 @@ namespace EventStoreTools
             services.AddTransient<ISearchStrategyFactory, SearchStrategyFactory>();
             services.AddTransient<ISubscribeRepository, SubscribeRepository>();
             services.AddTransient<ISubscribesService, SubscribesService>();
+            services.AddTransient<IRestoreService, RestoreService>();
 
         }
 

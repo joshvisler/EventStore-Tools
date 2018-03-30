@@ -51,10 +51,10 @@ namespace BackupRestoreService.Infrastrucute.FileSystemManager
         {
             await Task.Run(() =>
             {
-                File.Copy(_dataPath + Chaser, _dataPath + Truncate);
 
-                var zipPath = _backupPath + DateTime.UtcNow.ToString(DateTimeFormat) + FileExt;
-                ZipFile.ExtractToDirectory(zipPath, _dataPath);
+                File.Copy(_dataPath + "\\" + Chaser, _dataPath + "\\" +Truncate, true);
+
+                ZipFile.ExtractToDirectory(backupPath, _dataPath, true);
             });
         }
 
