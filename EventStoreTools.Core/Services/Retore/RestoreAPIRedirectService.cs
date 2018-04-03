@@ -29,10 +29,10 @@ namespace EventStoreTools.Core.Services.Retore
             });
         }
 
-        public async Task<IEnumerable<RestoreResult>> GetAllRestorsAsync()
+        public async Task<IEnumerable<RestoreResultDTO>> GetAllRestorsAsync()
         {
             var request = new RestRequest(_restoreApiAddress, Method.GET);
-            var result = await _webClient.ExecuteGetTaskAsync<IEnumerable<RestoreResult>>(request);
+            var result = await _webClient.ExecuteGetTaskAsync<IEnumerable<RestoreResultDTO>>(request);
 
             return await Task.FromResult(result.Data);
         }

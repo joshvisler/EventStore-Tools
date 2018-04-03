@@ -1,5 +1,4 @@
 ﻿using BackupRestoreService.Core.Entities;
-using BackupRestoreService.Core.Entities.Enums;
 using BackupRestoreService.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -36,10 +35,16 @@ namespace BackupRestoreService.Controllers
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public async Task Delete([FromBody]InputParametersBase input)
+        [HttpDelete]
+        public  ActionResult Delete([FromBody]InputParametersBase input)
         {
-            await _backupService.DeleteAsync(input.BackupId, input.ClientId);
+            if(input.ClientId == Guid.Empty || input.ClientId == null)
+            {
+                
+                return new BadRequestResult();
+            }
+
+            return Ok(_backupService.DeleteAsync(input.BackupId, input.ClientId));
         }
     }
 }

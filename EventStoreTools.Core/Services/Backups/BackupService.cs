@@ -2,62 +2,63 @@
 using EventStoreTools.Core.Entities.Enums;
 using EventStoreTools.Core.Exceptions;
 using EventStoreTools.Core.Interfaces;
-using EventStoreTools.Core.Interfaces.Restores;
-using EventStoreTools.DTO.Entities.Restore;
+using EventStoreTools.Core.Interfaces.Backups;
+using EventStoreTools.DTO.Entities.Backups;
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace EventStoreTools.Core.Services.Retore
+namespace EventStoreTools.Core.Services.Backups
 {
-    public class RestoreService : IRestoreService
+    public class BackupService : IBackupService
     {
         private readonly IConnectionRepository _connectionRepository;
 
-        public RestoreService(IConnectionRepository connectionRepository)
+        public BackupService(IConnectionRepository connectionRepository)
         {
             _connectionRepository = connectionRepository;
         }
 
-        public async Task DeleteAsync(Guid connectionId, int restoreId)
-        {
-            await Task.Run(() => 
-            {
-                var connection = GetConnection(connectionId);
-
-                using (var api = new RestoreAPIRedirectService(connection.ServiceAddress))
-                {
-                    return api.DeleteAsync(restoreId);
-                }
-            });
-        }
-
-        public async Task<IEnumerable<RestoreResultDTO>> GetAllRestorsAsync(Guid connectionId)
+        public async Task<BackupStatus> CreateBackupAsync(Guid connectionId, BackupParamDTO backup)
         {
             return await Task.Run(() =>
             {
                 var connection = GetConnection(connectionId);
 
-                using (var api = new RestoreAPIRedirectService(connection.ServiceAddress))
+                using (var api = new BackupAPIRedirectService(connection.ServiceAddress))
                 {
-                    var result = api.GetAllRestorsAsync().Result;
+                    return api.CreateBackupAsync(backup);
+                }
+            });
+        }
+
+        public async Task DeleteAsync(Guid connectionId, BackupParamDTO backup)
+        {
+            await Task.Run(() =>
+            {
+                var connection = GetConnection(connectionId);
+
+                using (var api = new BackupAPIRedirectService(connection.ServiceAddress))
+                {
+                    return api.DeleteAsync(backup);
+                }
+            });
+        }
+
+        public async Task<IEnumerable<BackupResultDTO>> GetAllBackupsAsync(Guid connectionId)
+        {
+            return await Task.Run(() =>
+            {
+                var connection = GetConnection(connectionId);
+
+                using (var api = new BackupAPIRedirectService(connection.ServiceAddress))
+                {
+                    var result = api.GetAllBackupsAsync().Result;
                     if (result == null)
                         throw new NullReferenceException();
 
                     return result;
-                }
-            });
-        }
-
-        public async Task<RestoreStatus> RestoreAsync(Guid connectionId, RestoreParamsDTO restore)
-        {
-            return await Task.Run(() =>
-            {
-                var connection = GetConnection(connectionId);
-
-                using (var api = new RestoreAPIRedirectService(connection.ServiceAddress))
-                {
-                    return api.RestoreAsync(restore);
                 }
             });
         }
@@ -74,4 +75,5 @@ namespace EventStoreTools.Core.Services.Retore
             return connectionInfo;
         }
     }
+
 }

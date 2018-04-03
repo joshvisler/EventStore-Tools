@@ -12,13 +12,13 @@ namespace EventStoreTools.Core.Services.Search.Factories
         {
             var searchStrategies = new List<ISearchStrategy<object, Event>>();
 
-            if (searchParams.From != null)
+            if (searchParams.From != null && searchParams.From.HasValue)
             {
-                searchStrategies.Add(new DateSearchStrategy(searchParams.From));
+                searchStrategies.Add(new DateSearchStrategy(searchParams.From.Value));
             }
-            else if (searchParams.To != null)
+            else if (searchParams.To != null && searchParams.To.HasValue)
             {
-                searchStrategies.Add(new DateSearchStrategy(searchParams.To));
+                searchStrategies.Add(new DateSearchStrategy(searchParams.To.Value));
 
             }
             else if(searchParams.Data != null && !string.IsNullOrEmpty(searchParams.Data))

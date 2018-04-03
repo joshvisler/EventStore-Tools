@@ -1051,3 +1051,12 @@ SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."Execute
 FROM "restors" AS "r"
 Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 27.7168ms
 Request finished in 33.7105ms 200 application/json; charset=utf-8
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 178.3596ms 404 

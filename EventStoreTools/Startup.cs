@@ -20,6 +20,8 @@ using EventStoreTools.Core.Interfaces.Subscribes;
 using EventStoreTools.Web.Logger;
 using EventStoreTools.Core.Interfaces.Restores;
 using EventStoreTools.Core.Services.Retore;
+using EventStoreTools.Core.Services.Backups;
+using EventStoreTools.Core.Interfaces.Backups;
 
 namespace EventStoreTools
 {
@@ -39,6 +41,7 @@ namespace EventStoreTools
                 services.AddEntityFrameworkNpgsql().AddDbContext<EventStoreToolsDBContext>(options => options.UseNpgsql(connectionString));
             services.AddAutoMapper(x => x.AddProfile(new MapperProfile()));
             services.AddMvc();
+            services.AddCors();
             services.AddTransient<IClientService, ClientService>();
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IClientRepository, ClientRepository>();
@@ -52,7 +55,7 @@ namespace EventStoreTools
             services.AddTransient<ISubscribeRepository, SubscribeRepository>();
             services.AddTransient<ISubscribesService, SubscribesService>();
             services.AddTransient<IRestoreService, RestoreService>();
-
+            services.AddTransient<IBackupService, BackupService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

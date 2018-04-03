@@ -3,7 +3,7 @@
 
 namespace EventStoreTools.DTO.Entities.Restore
 {
-    public class RestoreResult
+    public class RestoreResultDTO
     {
         public int RestoreId { get; set; }
         public int BackupId { get; set; }

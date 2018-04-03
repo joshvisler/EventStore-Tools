@@ -22,7 +22,7 @@ namespace EventStoreTools.Web.Controllers
         }
         
         [HttpGet("{connectionId}")]
-        public Task<IEnumerable<RestoreResult>> Get(Guid connectionId)
+        public Task<IEnumerable<RestoreResultDTO>> Get(Guid connectionId)
         {
             return _restoreService.GetAllRestorsAsync(connectionId);
         }

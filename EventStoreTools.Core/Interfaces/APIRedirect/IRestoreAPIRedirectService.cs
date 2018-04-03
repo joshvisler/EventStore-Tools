@@ -10,7 +10,7 @@ namespace EventStoreTools.Core.Interfaces.APIRedirect
     public interface IRestoreAPIRedirectService : IDisposable
     {
         Task<RestoreStatus> RestoreAsync(RestoreParamsDTO restore);
-        Task<IEnumerable<RestoreResult>> GetAllRestorsAsync();
+        Task<IEnumerable<RestoreResultDTO>> GetAllRestorsAsync();
         Task DeleteAsync(int restoreId);
     }
 }
