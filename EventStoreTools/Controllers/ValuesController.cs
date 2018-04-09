@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using EventStoreTools.Core.Entities;
 using EventStoreTools.Infrastructure.DataBase.Contexts;
@@ -10,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace EventStoreTools.Controllers
 {
     [Route("api/[controller]")]
-    [AllowAnonymous]
+    [Authorize]
     public class ValuesController : Controller
     {
         public EventStoreToolsDBContext _context { get; }

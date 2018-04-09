@@ -22,6 +22,9 @@ using EventStoreTools.Core.Interfaces.Restores;
 using EventStoreTools.Core.Services.Retore;
 using EventStoreTools.Core.Services.Backups;
 using EventStoreTools.Core.Interfaces.Backups;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using EventStoreTools.Core.JWT;
 
 namespace EventStoreTools
 {
@@ -37,6 +40,21 @@ namespace EventStoreTools
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                    .AddJwtBearer(options =>
+                    {
+                        options.RequireHttpsMetadata = false;
+                        options.TokenValidationParameters = new TokenValidationParameters
+                        {
+                            ValidateIssuer = true,
+                            ValidIssuer = AuthOptions.ISSUER,
+                            ValidAudience = AuthOptions.AUDIENCE,
+                            ValidateLifetime = true,
+                            IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
+                            ValidateIssuerSigningKey = true
+                        };
+                    });
+
             var connectionString = Configuration.GetConnectionString("estoolsdb");
                 services.AddEntityFrameworkNpgsql().AddDbContext<EventStoreToolsDBContext>(options => options.UseNpgsql(connectionString));
             services.AddAutoMapper(x => x.AddProfile(new MapperProfile()));
@@ -73,9 +91,10 @@ namespace EventStoreTools
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseAuthentication();
             app.UseStaticFiles();
             app.UseCors(builder =>
-             builder.WithOrigins("http://localhost:4200")
+            builder.WithOrigins("http://localhost:4200")
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 

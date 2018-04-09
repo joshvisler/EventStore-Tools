@@ -10,7 +10,7 @@ namespace EventStoreTools.Core.JWT
         public const string ISSUER = "EventStore-Tools";
         public const string AUDIENCE = "https://localhost:44382/";
         const string KEY = "EventStore is better";   // encrypt key
-        public const int LIFETIME = 60;
+        public const int LIFETIME = 1;
         public static SymmetricSecurityKey GetSymmetricSecurityKey()
         {
             return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(KEY));

@@ -29,7 +29,9 @@ namespace EventStoreTools.Infrastructure.DataBase.Repositories
 
         public Client GetByLogin(string login)
         {
-            return _dbContext.Clients.Where(c=>c.Login == login).FirstOrDefault();
+            var client = _dbContext.Clients.Where(c => c.Login == login).FirstOrDefault();
+            client.Role = _dbContext.Roles.FirstOrDefault(r=>r.RoleId == client.RoleId);
+            return client;
         }
 
         public async Task<Client> GetByLoginAsync(string login)

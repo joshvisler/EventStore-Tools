@@ -1,17 +1,11 @@
 ﻿using EventStoreTools.Core.Entities;
 using EventStoreTools.Core.Interfaces;
 using EventStoreTools.Core.JWT;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Threading.Tasks;
 
 namespace EventStoreTools.Web.Controllers
 {
     [Route("api/v1/[controller]")]
-    //[EnableCors(origins: "*", headers: "*", methods: "*")]
-    [Authorize]
     public class AuthController : Controller
     {
         private readonly IAuthService _authService;
@@ -21,33 +15,51 @@ namespace EventStoreTools.Web.Controllers
             _authService = authService;
         }
 
-        [AllowAnonymous]
-        //[HttpPost("login")]
-        //[ActionName("login")]
-        public async Task Post([FromBody]AuthParameters login)
+        [HttpPost("userCheck")]
+        public ActionResult Post([FromBody]string login)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = _authService.ClientExist(login).Result;
+
+            return Ok(result);
+        }
+
+        [HttpPost("login")]
+        public ActionResult Post([FromBody]AuthParameters login)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var identity = _authService.Auth(login);
             if (identity == null)
             {
-                Response.StatusCode = 400;
-                await Response.WriteAsync("Invalid username or password.");
-                return;
+                return BadRequest("Invalid username or password.");
             }
 
             var token = JWTTokenGenerator.GenerateJSWToken(identity);
-            var response = new { access_token = token };
-            Response.ContentType = "application/json";
-            await Response.WriteAsync(JsonConvert.SerializeObject(response, new JsonSerializerSettings { Formatting = Formatting.Indented }));
+            return Ok(new { Token = token });
         }
 
-        [AllowAnonymous]
         [HttpPost("signin")]
-        [ActionName("signin")]
-        public async Task Signin([FromBody]AuthParameters user)
+        public ActionResult Signin([FromBody]AuthParameters user)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var result = new { Result = _authService.Register(user) };
-            Response.ContentType = "application/json";
-            await Response.WriteAsync(JsonConvert.SerializeObject(result, new JsonSerializerSettings { Formatting = Formatting.Indented }));
+
+            if (result.Result == null)
+                return BadRequest();
+
+            return Ok(true);
         }
     }
 }

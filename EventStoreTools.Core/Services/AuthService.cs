@@ -6,6 +6,7 @@ using EventStoreTools.Core.Encrypt;
 using System.Collections.Generic;
 using System.Linq;
 using EventStoreTools.Core.Exceptions;
+using System.Threading.Tasks;
 
 namespace EventStoreTools.Core.Services
 {
@@ -15,22 +16,33 @@ namespace EventStoreTools.Core.Services
         private const int UserRole = 0;
         private const string KEY = "C2937E5FE29A448295823189042C0E37";
 
-
         public AuthService(IClientRepository clientRepository)
         {
             _clientRepository = clientRepository;
         }
 
+        public async Task<bool> ClientExist(string login)
+        {
+            var client = await _clientRepository.GetByLoginAsync(login);
+            if (client != null)
+                return true;
+
+            return false;
+        }
+
         public ClaimsIdentity Auth(AuthParameters user)
         {
             var person = _clientRepository.GetByLogin(user.Login);
-            if (person != null)
+            var personPassord = Encrypter.DecryptString(person.PasswordHash, KEY);
+
+            if (person != null && user.Password == personPassord)
             {
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimsIdentity.DefaultNameClaimType, person.Login),
                     new Claim(ClaimsIdentity.DefaultRoleClaimType, person.Role.Name)
                 };
+
                 return new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
             }
 
