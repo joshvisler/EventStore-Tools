@@ -64,3 +64,4 @@ Logger/obj
 Logger/bin
 EventStoreTools/logger.txt
 EventStoreTools/logger.txt
+*.txt

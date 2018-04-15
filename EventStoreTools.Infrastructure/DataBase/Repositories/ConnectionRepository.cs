@@ -70,7 +70,7 @@ namespace EventStoreTools.Infrastructure.DataBase.Repositories
 
         public async Task<Connection> GetByIdAsync(Guid id)
         {
-            return await Task.FromResult( _dbContext.Connections.FirstOrDefault(c => c.ConnectionId == id));
+            return await Task.FromResult(_dbContext.Connections.FirstOrDefault(c => c.ConnectionId == id));
         }
 
         public IEnumerable<Connection> Get()

@@ -1,9 +1,9 @@
 C:\Repositories\EventStore-Tools\EventStoreTools.DTO\bin\Debug\netcoreapp2.0\EventStoreTools.DTO.deps.json
 C:\Repositories\EventStore-Tools\EventStoreTools.DTO\bin\Debug\netcoreapp2.0\EventStoreTools.DTO.dll
 C:\Repositories\EventStore-Tools\EventStoreTools.DTO\bin\Debug\netcoreapp2.0\EventStoreTools.DTO.pdb
+C:\Repositories\EventStore-Tools\EventStoreTools.DTO\obj\Debug\netcoreapp2.0\EventStoreTools.DTO.csprojResolveAssemblyReference.cache
 C:\Repositories\EventStore-Tools\EventStoreTools.DTO\obj\Debug\netcoreapp2.0\EventStoreTools.DTO.csproj.CoreCompileInputs.cache
 C:\Repositories\EventStore-Tools\EventStoreTools.DTO\obj\Debug\netcoreapp2.0\EventStoreTools.DTO.AssemblyInfoInputs.cache
 C:\Repositories\EventStore-Tools\EventStoreTools.DTO\obj\Debug\netcoreapp2.0\EventStoreTools.DTO.AssemblyInfo.cs
 C:\Repositories\EventStore-Tools\EventStoreTools.DTO\obj\Debug\netcoreapp2.0\EventStoreTools.DTO.dll
 C:\Repositories\EventStore-Tools\EventStoreTools.DTO\obj\Debug\netcoreapp2.0\EventStoreTools.DTO.pdb
-C:\Repositories\EventStore-Tools\EventStoreTools.DTO\obj\Debug\netcoreapp2.0\EventStoreTools.DTO.csprojResolveAssemblyReference.cache

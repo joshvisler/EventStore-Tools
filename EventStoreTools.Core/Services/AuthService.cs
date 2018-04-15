@@ -13,7 +13,7 @@ namespace EventStoreTools.Core.Services
     public class AuthService : IAuthService
     {
         private readonly IClientRepository _clientRepository;
-        private const int UserRole = 0;
+        private const int BaseRole = 1;
         private const string KEY = "C2937E5FE29A448295823189042C0E37";
 
         public AuthService(IClientRepository clientRepository)
@@ -54,7 +54,7 @@ namespace EventStoreTools.Core.Services
             var clientId = Guid.NewGuid();
             var passwordHash = Encrypter.EncryptString(user.Password, KEY);
 
-            return _clientRepository.Insert(new Client(Guid.NewGuid(), UserRole, passwordHash, user.Login));
+            return _clientRepository.Insert(new Client(Guid.NewGuid(), BaseRole, passwordHash, user.Login));
         }
 
         public Client GetCurrentClient(ClaimsPrincipal user)

@@ -1060,3 +1060,30 @@ Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30'
 SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
 Request starting HTTP/1.1 GET http://localhost:53375/api/values  
 Request finished in 178.3596ms 404 
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 136.7931ms 404 
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 138.3382ms 404 
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 111.4071ms 404 

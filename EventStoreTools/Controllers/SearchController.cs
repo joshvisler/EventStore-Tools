@@ -10,7 +10,7 @@ using System.Security.Claims;
 namespace EventStoreTools.Web.Controllers
 {
     [Route("api/v1/[controller]")]
-    [AllowAnonymous]
+    [Authorize]
     public class SearchController : Controller
     {
         private readonly ISearchService _searchService;

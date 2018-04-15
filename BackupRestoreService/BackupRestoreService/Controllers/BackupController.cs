@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BackupRestoreService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class BackupController : Controller
     {
         private readonly IBackupService _backupService;

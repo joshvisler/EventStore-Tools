@@ -55,8 +55,14 @@ namespace EventStoreTools
                         };
                     });
 
-            var connectionString = Configuration.GetConnectionString("estoolsdb");
-                services.AddEntityFrameworkNpgsql().AddDbContext<EventStoreToolsDBContext>(options => options.UseNpgsql(connectionString));
+            var connection = Configuration["ConnectionStrings:EventStoreToolsConnectionString"];
+
+            services.AddDbContext<EventStoreToolsDBContext>(options =>
+                options.UseSqlite(connection)
+            );
+
+
+
             services.AddAutoMapper(x => x.AddProfile(new MapperProfile()));
             services.AddMvc();
             services.AddCors();
@@ -80,6 +86,14 @@ namespace EventStoreTools
         {
             loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
             var logger = loggerFactory.CreateLogger("ApplicationLogger");
+
+
+
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<EventStoreToolsDBContext>();
+                context.Database.EnsureCreated();
+            }
 
             if (env.IsDevelopment())
             {
