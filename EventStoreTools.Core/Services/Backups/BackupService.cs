@@ -6,7 +6,6 @@ using EventStoreTools.Core.Interfaces.Backups;
 using EventStoreTools.DTO.Entities.Backups;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace EventStoreTools.Core.Services.Backups
@@ -20,7 +19,7 @@ namespace EventStoreTools.Core.Services.Backups
             _connectionRepository = connectionRepository;
         }
 
-        public async Task<BackupStatus> CreateBackupAsync(Guid connectionId, BackupParamDTO backup)
+        public async Task<BackupStatus> CreateBackupAsync(Guid connectionId)
         {
             return await Task.Run(() =>
             {
@@ -28,12 +27,12 @@ namespace EventStoreTools.Core.Services.Backups
 
                 using (var api = new BackupAPIRedirectService(connection.ServiceAddress))
                 {
-                    return api.CreateBackupAsync(backup);
+                    return api.CreateBackupAsync();
                 }
             });
         }
 
-        public async Task DeleteAsync(Guid connectionId, BackupParamDTO backup)
+        public async Task DeleteAsync(Guid connectionId, Guid backupId)
         {
             await Task.Run(() =>
             {
@@ -41,7 +40,7 @@ namespace EventStoreTools.Core.Services.Backups
 
                 using (var api = new BackupAPIRedirectService(connection.ServiceAddress))
                 {
-                    return api.DeleteAsync(backup);
+                    return api.DeleteAsync(backupId);
                 }
             });
         }

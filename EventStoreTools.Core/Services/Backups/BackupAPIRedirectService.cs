@@ -17,12 +17,12 @@ namespace EventStoreTools.Core.Services.Backups
             _webClient = new RestClient(baseAddress);
         }
 
-        public Task DeleteAsync(BackupParamDTO backup)
+        public Task DeleteAsync(Guid backupId)
         {
             return Task.Run(() =>
             {
                 var request = new RestRequest(_restoreApiAddress, Method.DELETE);
-                request.AddBody(backup);
+                request.AddBody(backupId);
                 _webClient.Execute(request);
             });
         }
@@ -35,12 +35,11 @@ namespace EventStoreTools.Core.Services.Backups
             return await Task.FromResult(result.Data);
         }
 
-        public async Task<BackupStatus> CreateBackupAsync(BackupParamDTO backup)
+        public async Task<BackupStatus> CreateBackupAsync()
         {
             return await Task.Run(async () =>
             {
                 var request = new RestRequest(_restoreApiAddress, Method.POST);
-                request.AddBody(backup.ClientId); 
                 var result = await _webClient.ExecutePostTaskAsync<BackupResultDTO>(request);
                 return await Task.FromResult((BackupStatus)result.Data.Status);
             });

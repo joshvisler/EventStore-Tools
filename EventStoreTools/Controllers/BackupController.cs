@@ -28,15 +28,15 @@ namespace EventStoreTools.Web.Controllers
         }
 
         [HttpPost("{connectionId}")]
-        public async Task<BackupStatus> Post([FromQuery]Guid connectionId, [FromBody]BackupParamDTO backup)
+        public async Task<BackupStatus> Post([FromQuery]Guid connectionId)
         {
-            return await _backupService.CreateBackupAsync(connectionId, backup);
+            return await _backupService.CreateBackupAsync(connectionId);
         }
 
         [HttpDelete("{connectionId}")]
-        public void Delete(Guid connectionId, [FromBody]BackupParamDTO backup)
+        public void Delete(Guid connectionId, [FromBody]Guid backupId)
         {
-            _backupService.DeleteAsync(connectionId, backup);
+            _backupService.DeleteAsync(connectionId, backupId);
         }
     }
 }

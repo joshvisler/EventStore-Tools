@@ -65,3 +65,7 @@ Logger/bin
 EventStoreTools/logger.txt
 EventStoreTools/logger.txt
 *.txt
+EventStoreTools/logger.txt
+EventStoreTools.DTO/obj/Debug/netcoreapp2.0/EventStoreTools.DTO.dll
+EventStoreTools.DTO/obj/Debug/netcoreapp2.0/EventStoreTools.DTO.pdb
+BackupRestoreService/BackupRestoreService/logger.txt
