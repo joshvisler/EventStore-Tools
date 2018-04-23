@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using EventStoreTools.Core.Entities;
 using EventStoreTools.Core.Entities.Enums;
 using EventStoreTools.Core.Interfaces.APIRedirect;
 using EventStoreTools.DTO.Entities.Restore;
@@ -24,7 +22,7 @@ namespace EventStoreTools.Core.Services.Retore
             return Task.Run(() =>
             {
                 var request = new RestRequest(_restoreApiAddress, Method.DELETE);
-                request.AddBody(restoreId); // adds to POST or URL querystring based on Method
+                request.AddBody(restoreId);
                 _webClient.Execute(request);
             });
         }
@@ -42,7 +40,8 @@ namespace EventStoreTools.Core.Services.Retore
             return await Task.Run(async () =>
             {
                 var request = new RestRequest(_restoreApiAddress, Method.POST);
-                request.AddBody(restore); // adds to POST or URL querystring based on Method
+                request.RequestFormat = DataFormat.Json;
+                request.AddBody(restore);
                 var result = await _webClient.ExecutePostTaskAsync<RestoreStatus>(request);
                 return await Task.FromResult(result.Data);
             });

@@ -1087,3 +1087,763 @@ Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30'
 SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
 Request starting HTTP/1.1 GET http://localhost:53375/api/values  
 Request finished in 111.4071ms 404 
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 146.0934ms 404 
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 409.9369ms
+Request finished in 466.9943ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 39.9173ms
+Request finished in 47.8116ms 200 application/json; charset=utf-8
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 149.5019ms 404 
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 413.6077ms
+Request finished in 469.791ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 22.4664ms
+Request finished in 31.3392ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 29.4598ms
+Request finished in 35.718ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 28.885ms
+Request finished in 34.3469ms 200 application/json; charset=utf-8
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 122.1132ms 404 
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 435.5174ms
+Request finished in 494.1405ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 37.6455ms
+Request finished in 44.019ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 40.0883ms
+Request finished in 50.8484ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 59.7946ms
+Request finished in 111.2876ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 33.825ms
+Request finished in 41.8824ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 25.0847ms
+Request finished in 30.4ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 27.5906ms
+Request finished in 33.8355ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 29.5472ms
+Request finished in 36.5091ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 40.2067ms
+Request finished in 49.9338ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 30.3924ms
+Request finished in 36.8009ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 33.4377ms
+Request finished in 41.6324ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 29.1182ms
+Request finished in 35.9635ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 30.1151ms
+Request finished in 36.5295ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 32.1216ms
+Request finished in 39.8194ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 31.3831ms
+Request finished in 37.5502ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 24.9792ms
+Request finished in 31.4847ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 55.4591ms
+Request finished in 62.4486ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 34.2234ms
+Request finished in 39.5931ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup text/xml 8
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 24.9074ms
+Request finished in 102.0385ms 415 
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup text/xml 8
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 3.4608ms
+Request finished in 14.4754ms 415 
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup  36
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 6.8471ms
+Request finished in 12.0238ms 415 
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup application/json 36
+Executing action method BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) with arguments (00000000-0000-0000-0000-000000000000) - ModelState is Invalid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 2913.6633ms
+Request finished in 2920.8953ms 400 text/plain; charset=utf-8
+Heartbeat took longer than "00:00:01" at "04/21/2018 21:24:09 +00:00".
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup application/json 36
+Executing action method BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) with arguments (00000000-0000-0000-0000-000000000000) - ModelState is Invalid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 4655.4536ms
+Request finished in 4661.1099ms 400 text/plain; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup application/json 38
+Executing action method BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) with arguments (288a162a-fb33-49a0-916e-26a3e5327aa7) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 63), @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "backups" ("BackupPath", "ClientId", "Date", "ExecutedDate", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "BackupId"
+FROM "backups"
+WHERE changes() = 1 AND "BackupId" = last_insert_rowid();
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 4794.4307ms
+Request finished in 4800.5188ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup text/xml 8
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 3.9881ms
+Request finished in 12.199ms 415 
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 26.3845ms
+Request finished in 33.1393ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup text/xml 8
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 3.1924ms
+Request finished in 10.0311ms 415 
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup text/xml 8
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 2.3827ms
+Request finished in 10.5335ms 415 
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup application/json 38
+Executing action method BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) with arguments (5bcac9a6-bd96-483e-9bcd-b8464e3a683a) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 63), @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "backups" ("BackupPath", "ClientId", "Date", "ExecutedDate", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "BackupId"
+FROM "backups"
+WHERE changes() = 1 AND "BackupId" = last_insert_rowid();
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 4673.1858ms
+Request finished in 4679.4674ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 21.1167ms
+Request finished in 27.349ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 27.8282ms
+Request finished in 35.1699ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 30.9684ms
+Request finished in 37.3267ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/backup application/json 38
+Executing action method BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) with arguments (5bcac9a6-bd96-483e-9bcd-b8464e3a683a) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 63), @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "backups" ("BackupPath", "ClientId", "Date", "ExecutedDate", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "BackupId"
+FROM "backups"
+WHERE changes() = 1 AND "BackupId" = last_insert_rowid();
+Executed action BackupRestoreService.Controllers.BackupController.Post (BackupRestoreService) in 2079.2518ms
+Request finished in 2086.1683ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 17.0152ms
+Request finished in 22.3405ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 28.672ms
+Request finished in 35.0852ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 30.8762ms
+Request finished in 37.1719ms 200 application/json; charset=utf-8
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 167.2193ms 404 
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 397.7469ms
+Request finished in 450.8813ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 49.0543ms
+Request finished in 60.2915ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 22.3831ms
+Request finished in 27.7537ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 27.7765ms
+Request finished in 33.7306ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 28.1164ms
+Request finished in 34.3842ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 14.5243ms
+Request finished in 19.2862ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 29.0067ms
+Request finished in 34.1264ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 20.7645ms
+Request finished in 25.8965ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 24.9663ms
+Request finished in 36.6494ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 22.1971ms
+Request finished in 27.7723ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 28.3225ms
+Request finished in 33.8136ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 16.8037ms
+Request finished in 22.6247ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 21.8041ms
+Request finished in 27.4085ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/restore text/xml 127
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action BackupRestoreService.Controllers.RestoreController.Post (BackupRestoreService) in 13.0656ms
+Request finished in 32.152ms 415 
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 14.8044ms
+Request finished in 22.25ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 28.5773ms
+Request finished in 33.8352ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/restore text/xml 127
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action BackupRestoreService.Controllers.RestoreController.Post (BackupRestoreService) in 3.9196ms
+Request finished in 13.1638ms 415 
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 26.9004ms
+Request finished in 32.6219ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/restore application/json 65
+Executing action method BackupRestoreService.Controllers.RestoreController.Post (BackupRestoreService) with arguments (BackupRestoreService.Core.Entities.InputParametersBase) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (14ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "restors" ("BackupId", "ClientId", "Date", "ExecutedDate", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "RestoreId"
+FROM "restors"
+WHERE changes() = 1 AND "RestoreId" = last_insert_rowid();
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+WHERE "b"."BackupId" = @__id_0
+LIMIT 1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[@__data_RestoreId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+WHERE "r"."RestoreId" = @__data_RestoreId_0
+LIMIT 1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (6ms) [Parameters=[@p5='?', @p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "restors" SET "BackupId" = @p0, "ClientId" = @p1, "Date" = @p2, "ExecutedDate" = @p3, "Status" = @p4
+WHERE "RestoreId" = @p5;
+SELECT changes();
+Executed action BackupRestoreService.Controllers.RestoreController.Post (BackupRestoreService) in 6372.5417ms
+Request finished in 6378.9387ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 18.0756ms
+Request finished in 23.6881ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 26.9971ms
+Request finished in 32.3893ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:53375/api/v1/restore application/json 65
+Executing action method BackupRestoreService.Controllers.RestoreController.Post (BackupRestoreService) with arguments (BackupRestoreService.Core.Entities.InputParametersBase) - ModelState is Valid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "restors" ("BackupId", "ClientId", "Date", "ExecutedDate", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "RestoreId"
+FROM "restors"
+WHERE changes() = 1 AND "RestoreId" = last_insert_rowid();
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+WHERE "b"."BackupId" = @__id_0
+LIMIT 1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[@__data_RestoreId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+WHERE "r"."RestoreId" = @__data_RestoreId_0
+LIMIT 1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (2ms) [Parameters=[@p5='?', @p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "restors" SET "BackupId" = @p0, "ClientId" = @p1, "Date" = @p2, "ExecutedDate" = @p3, "Status" = @p4
+WHERE "RestoreId" = @p5;
+SELECT changes();
+Executed action BackupRestoreService.Controllers.RestoreController.Post (BackupRestoreService) in 4225.3718ms
+Request finished in 4230.7637ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/restore  0
+Executing action method BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "r"."RestoreId", "r"."BackupId", "r"."ClientId", "r"."Date", "r"."ExecutedDate", "r"."Status"
+FROM "restors" AS "r"
+Executed action BackupRestoreService.Controllers.RestoreController.Get (BackupRestoreService) in 26.9914ms
+Request finished in 33.1225ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53375/api/v1/backup  0
+Executing action method BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "b"."BackupId", "b"."BackupPath", "b"."ClientId", "b"."Date", "b"."ExecutedDate", "b"."Status"
+FROM "backups" AS "b"
+Executed action BackupRestoreService.Controllers.BackupController.Get (BackupRestoreService) in 20.3709ms
+Request finished in 26.0257ms 200 application/json; charset=utf-8
+Entity Framework Core 2.1.0-preview1-28290 initialized 'RestoreBackupContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+Request starting HTTP/1.1 GET http://localhost:53375/api/values  
+Request finished in 167.3957ms 404 

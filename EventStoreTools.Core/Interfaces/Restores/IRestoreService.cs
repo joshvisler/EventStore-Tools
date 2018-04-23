@@ -10,7 +10,7 @@ namespace EventStoreTools.Core.Interfaces.Restores
     public interface IRestoreService
     {
         Task<RestoreStatus> RestoreAsync(Guid connectionId, RestoreParamsDTO restore);
-        Task<IEnumerable<RestoreResultDTO>> GetAllRestorsAsync(Guid connectionId);
+        Task<IEnumerable<Restore>> GetAllRestorsAsync(Guid connectionId);
         Task DeleteAsync(Guid connectionId, int restoreId);
     }
 }

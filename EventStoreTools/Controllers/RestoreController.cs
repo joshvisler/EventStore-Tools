@@ -1,5 +1,6 @@
 ﻿using EventStoreTools.Core.Entities;
 using EventStoreTools.Core.Entities.Enums;
+using EventStoreTools.Core.Interfaces;
 using EventStoreTools.Core.Interfaces.Restores;
 using EventStoreTools.DTO.Entities.Restore;
 using Microsoft.AspNetCore.Authorization;
@@ -11,26 +12,35 @@ using System.Threading.Tasks;
 namespace EventStoreTools.Web.Controllers
 {
     [Route("api/v1/[controller]")]
-    [AllowAnonymous]
+    [Authorize]
     public class RestoreController : Controller
     {
         private readonly IRestoreService _restoreService;
+        private readonly IAuthService _authService;
 
-        public RestoreController(IRestoreService restoreService)
+        public RestoreController(IRestoreService restoreService, IAuthService authService)
         {
             _restoreService = restoreService;
+            _authService = authService;
         }
         
         [HttpGet("{connectionId}")]
-        public Task<IEnumerable<RestoreResultDTO>> Get(Guid connectionId)
+        public Task<IEnumerable<Restore>> Get(Guid connectionId)
         {
             return _restoreService.GetAllRestorsAsync(connectionId);
         }
 
         [HttpPost("{connectionId}")]
-        public Task<RestoreStatus> Post([FromQuery]Guid connectionId, [FromBody]RestoreParamsDTO restore)
+        public Task<RestoreStatus> Post(Guid connectionId, [FromBody]int backupId)
         {
-            return _restoreService.RestoreAsync(connectionId, restore);
+            var client = _authService.GetCurrentClient(this.User);
+
+            if(client == null)
+            {
+                BadRequest();
+            }
+
+            return _restoreService.RestoreAsync(connectionId, new RestoreParamsDTO { BackupId = backupId, ClientId = client.ClientId});
         }
         
         [HttpDelete("{restoreId}/{connectionId}")]

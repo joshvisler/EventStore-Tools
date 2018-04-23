@@ -6,6 +6,7 @@ using EventStoreTools.Core.Interfaces.Restores;
 using EventStoreTools.DTO.Entities.Restore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace EventStoreTools.Core.Services.Retore
@@ -13,10 +14,12 @@ namespace EventStoreTools.Core.Services.Retore
     public class RestoreService : IRestoreService
     {
         private readonly IConnectionRepository _connectionRepository;
+        private readonly IClientRepository _clientRepository;
 
-        public RestoreService(IConnectionRepository connectionRepository)
+        public RestoreService(IConnectionRepository connectionRepository, IClientRepository clientRepository)
         {
             _connectionRepository = connectionRepository;
+            _clientRepository = clientRepository;
         }
 
         public async Task DeleteAsync(Guid connectionId, int restoreId)
@@ -32,7 +35,7 @@ namespace EventStoreTools.Core.Services.Retore
             });
         }
 
-        public async Task<IEnumerable<RestoreResultDTO>> GetAllRestorsAsync(Guid connectionId)
+        public async Task<IEnumerable<Restore>> GetAllRestorsAsync(Guid connectionId)
         {
             return await Task.Run(() =>
             {
@@ -44,7 +47,16 @@ namespace EventStoreTools.Core.Services.Retore
                     if (result == null)
                         throw new NullReferenceException();
 
-                    return result;
+                    return result.Select(r=> 
+                    {
+                        var login = "";
+                        var client = _clientRepository.GetById(r.ClientId);
+                        if (client != null)
+                            login = client.Login;
+
+                        var status = Enum.GetName(typeof(RestoreStatus), r.Status);
+                        return new Restore(r.RestoreId, r.BackupId, r.Date, r.ExecutedDate, login, status);
+                    }); 
                 }
             });
         }

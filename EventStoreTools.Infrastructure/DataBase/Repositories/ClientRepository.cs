@@ -3,6 +3,7 @@ using EventStoreTools.Core.Entities;
 using System.Threading.Tasks;
 using System.Linq;
 using EventStoreTools.Infrastructure.DataBase.Contexts;
+using System;
 
 namespace EventStoreTools.Infrastructure.DataBase.Repositories
 {
@@ -71,6 +72,11 @@ namespace EventStoreTools.Infrastructure.DataBase.Repositories
         public void Dispose()
         {
             _dbContext.Dispose();
+        }
+
+        public Client GetById(Guid id)
+        {
+            return _dbContext.Clients.Where(c => c.ClientId == id).FirstOrDefault();
         }
     }
 }
