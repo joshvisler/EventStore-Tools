@@ -52,6 +52,8 @@ EventStoreTools.Core/bin
 EventStoreTools.Infrastructure/obj
 EventStoreTools/obj/
 EventStoreTools.Core/obj/
+EventStoreTools.Tests/obj
+EventStoreTools.Tests/bin
 
 BackupRestoreService/BackupRestoreService.Infrastrucute/bin
 BackupRestoreService/BackupRestoreService.Infrastrucute/obj
@@ -69,3 +71,4 @@ EventStoreTools/logger.txt
 EventStoreTools.DTO/obj/Debug/netcoreapp2.0/EventStoreTools.DTO.dll
 EventStoreTools.DTO/obj/Debug/netcoreapp2.0/EventStoreTools.DTO.pdb
 BackupRestoreService/BackupRestoreService/logger.txt
+EventStoreTools/logger.txt

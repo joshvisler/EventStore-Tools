@@ -6,6 +6,7 @@ using EventStoreTools.Core.Interfaces.Search;
 using EventStoreTools.Core.Interfaces;
 using EventStoreTools.Core.Exceptions;
 using System;
+using System.Linq;
 
 namespace EventStoreTools.Core.Services.Search
 {
@@ -49,11 +50,29 @@ namespace EventStoreTools.Core.Services.Search
 
             var eventStoreEvent = _eventStoreSearchRepositopy.SearchInStreamAsync(stream, eventStoreConnectionString).Result;
 
+
             foreach (var @event in eventStoreEvent)
             {
+                var isAvaible = true;
                 var eventData = System.Text.Encoding.UTF8.GetString(@event.Event.Data);
                 var domainEvent = new Event(@event.Event.EventStreamId, @event.Event.EventNumber, @event.Event.Created, eventData, @event.Event.EventType);
-                domainEvents.Add(domainEvent);
+
+                if (searchStrategies == null || searchStrategies.Count() == 0)
+                    domainEvents.Add(domainEvent);
+                else
+                {
+                    foreach (var searchStrategy in searchStrategies)
+                    {
+                        if (!searchStrategy.Compare(domainEvent))
+                        {
+                            isAvaible = false;
+                            break;
+                        }
+                    }
+
+                    if (isAvaible)
+                        domainEvents.Add(domainEvent);
+                }
             }
 
             return domainEvents;

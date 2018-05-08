@@ -33,24 +33,34 @@ namespace EventStoreTools.Core.Services
         public ClaimsIdentity Auth(AuthParameters user)
         {
             var person = _clientRepository.GetByLogin(user.Login);
+
+            if (person == null)
+                return null;
+
             var personPassord = Encrypter.DecryptString(person.PasswordHash, KEY);
 
-            if (person != null && user.Password == personPassord)
+            if (user.Password != personPassord)
             {
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimsIdentity.DefaultNameClaimType, person.Login),
-                    new Claim(ClaimsIdentity.DefaultRoleClaimType, person.Role.Name)
-                };
-
-                return new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
+                throw new WrongPasswordException();
             }
 
-            return null;
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimsIdentity.DefaultNameClaimType, person.Login),
+                new Claim(ClaimsIdentity.DefaultRoleClaimType, person.Role.Name)
+            };
+
+            return new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
         }
 
         public Client Register(AuthParameters user)
         {
+            if(ClientExist(user.Login).Result)
+            {
+                throw new UserExistException();
+            }
+
+
             var clientId = Guid.NewGuid();
             var passwordHash = Encrypter.EncryptString(user.Password, KEY);
 

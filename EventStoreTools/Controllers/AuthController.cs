@@ -1,7 +1,9 @@
 ﻿using EventStoreTools.Core.Entities;
+using EventStoreTools.Core.Exceptions;
 using EventStoreTools.Core.Interfaces;
 using EventStoreTools.Core.JWT;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace EventStoreTools.Web.Controllers
 {
@@ -54,10 +56,21 @@ namespace EventStoreTools.Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            var result = new { Result = _authService.Register(user) };
+            try
+            {
+                var result = new { Result = _authService.Register(user) };
 
-            if (result.Result == null)
-                return BadRequest();
+                if (result.Result == null)
+                    return BadRequest();
+            }
+            catch(WrongPasswordException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch(UserExistException e)
+            {
+                return BadRequest(e.Message);
+            }
 
             return Ok(true);
         }

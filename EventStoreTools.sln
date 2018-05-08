@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStoreTools.Infrastruct
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStoreTools.DTO", "EventStoreTools.DTO\EventStoreTools.DTO.csproj", "{0D4ADC81-A29F-4E92-8367-78F3066A49A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{7562D2E8-A0E3-4CD7-A15C-F466B07E44F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "Logger\Logger.csproj", "{7562D2E8-A0E3-4CD7-A15C-F466B07E44F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventStoreTools.Tests", "EventStoreTools.Tests\EventStoreTools.Tests.csproj", "{7E7F8728-EEAE-4D11-8ADA-8C0D3BDABB77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7562D2E8-A0E3-4CD7-A15C-F466B07E44F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7562D2E8-A0E3-4CD7-A15C-F466B07E44F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7562D2E8-A0E3-4CD7-A15C-F466B07E44F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7F8728-EEAE-4D11-8ADA-8C0D3BDABB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7F8728-EEAE-4D11-8ADA-8C0D3BDABB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7F8728-EEAE-4D11-8ADA-8C0D3BDABB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7F8728-EEAE-4D11-8ADA-8C0D3BDABB77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
